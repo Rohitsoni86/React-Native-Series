@@ -1,28 +1,52 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, View,useColorScheme , TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
+import sevenWD from "../public/sevenWondersData.json"
+import customCSS from "./CSS Files/ImageCadCSS.json"
+
+
 
 const ImageCards = () => {
+  const isDarkMode = useColorScheme() === "dark"
+  const wondersOfWorld = sevenWD
+  console.log(isDarkMode);
   return (
-    <View>
-      <Text style={styles.heading}>7 Wonders Of World :</Text>
-     <View style={[styles.container]}>
-
-     <View  style={[styles.card,styles.firstCard,styles.boxWithShadow]}>
+    // Image Cards Holder
+    <View >
+      <Text style={isDarkMode ? styles.headingDarkMode : styles.headingWhiteMode}>7 Wonders Of World :</Text>
+     <View style={[styles.cardsContainer]}>
+   
+   {
+    wondersOfWorld.map( ({id,title,location,image,details},index) => {
+      return(
+        <View key={id} style={[styles.card,styles.boxWithShadow]}>
+     
+      {/* Image Container */}
       <View style={styles.cardImageContainer}>
+        
       <Image
         style={styles.cardImage}
         source={{
-          uri: 'https://images.pexels.com/photos/14966070/pexels-photo-14966070/free-photo-of-in-front-of-iconic-taj-mahal.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          uri: `${image}`,
         }}
       />
       </View>
-      <Text style={[styles.cardTitle]}>Taj Mahal</Text>
-      <Text style={[styles.cardInfo]}>Pink City,Jaipur</Text>
-      
+      {/* Info Container */}
+      <View>
+      <Text style={[styles.cardTitle]}>{title}</Text>
+      <Text style={[styles.cardInfo]}>{location}</Text>
       </View>
-
-
-      
+      {/* Buttons Container */}
+      <View>
+        <TouchableOpacity
+        onPress={() => Alert.alert(`${details}`)}
+         style={[styles.touchStyleCSS,styles.boxWithShadow2]}>
+          <Text style={styles.buttonText}>Read More</Text>
+          </TouchableOpacity>
+      </View>
+      </View>
+      )
+    } )
+   }
      </View>
     </View>
   )
@@ -31,67 +55,100 @@ const ImageCards = () => {
 export default ImageCards
 
 const styles = StyleSheet.create({
-   container:{
+  cardsContainer:{
      display: 'flex',
-   //  backgroundColor:"pink",
      justifyContent:"center",
      alignItems:"center",
+     gap:40,
      padding: 20,
    },
-   heading:{
-      fontSize:24,
-      padding: 20,
-      color:"white",
-      fontWeight:"bold",
-    },
+   headingWhiteMode:{
+    fontSize:18,
+    color:"black",
+    paddingStart:20,
+    fontWeight:"bold",
+    
+  },
+  headingDarkMode:{
+    fontSize:18,
+    color:"pink",
+    paddingStart:20,
+    fontWeight:"bold",
+  },
     cardImageContainer:{
-      borderWidth:2,
+      
     },
     cardImage: {
       height:200,
   },
     cardTitle:{
       paddingTop:10,
+      marginHorizontal:10,
       fontSize:18,
       color:"white",
+      textAlign:"center",
       fontWeight:"500",
     },
     cardInfo:{
       paddingTop:10,
+       marginHorizontal:10,
       fontSize:16,
       color:"white",
       fontWeight:"300",
     },
     card:{
       width:300,
+      backgroundColor:"#222f3e",
    
-      padding:10,
+      paddingVertical:14,
        margin:10,
        borderRadius: 4,
-       boxShadow:" 2.8px 5.6px 5.6px hsl(0deg 0% 0% / 0.41)",
+       boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+    //   boxShadow:" 2.8px 5.6px 5.6px hsl(0deg 0% 0% / 0.41)",
      
    },
    boxWithShadow: {
-     shadowColor: '#000',
-     shadowOffset: { width: 0, height: 1 },
-     shadowOpacity: 0.8,
-     shadowRadius: 2,  
-   
+    shadowColor: "#000",
+    shadowOffset: {
+    	width: 0,
+	   height: 3,
+      },
+     shadowOpacity: 0.29,
+     shadowRadius: 4.65,
+
+     elevation: 7,
  },
  
-   firstCard:{
-     backgroundColor:"#f368e0"
-   },
-   secondCard:{
-     backgroundColor:"#00d2d3"
-   },
-   fourCard:{
-     backgroundColor:"#00d2d3"
-   },
-   thirdCard:{
-     backgroundColor:"#1dd1a1"
-   },
-   fifthCard:{
-     backgroundColor:"#2e86de"
-   }
+
+ // BUTTON 
+
+ touchStyleCSS:{
+  
+  color:"white",
+  padding:8,
+  marginVertical:10,
+  marginHorizontal:10,
+  borderRadius:8,
+  backgroundColor:"#54a0ff"
+  
+ },
+ buttonText:{
+  fontSize:18,
+  color:"black",
+  fontWeight:"500",
+  textAlign:"center"
+ },
+ boxWithShadow2: {
+  shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 1,
+},
+shadowOpacity: 0.22,
+shadowRadius: 2.22,
+
+elevation: 3,
+},
+ 
+   
  })

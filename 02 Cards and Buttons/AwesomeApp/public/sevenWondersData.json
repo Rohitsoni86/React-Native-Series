@@ -1,0 +1,51 @@
+[
+   {
+      "id": 1,
+      "title": "Great Wall of China",
+      "location": "China",
+      "image": "https://st.adda247.com/https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892506/EducationHub/photos/the-great-wall-of-china.jpg",
+      "details": "The Great Wall of China, spanning approximately 5,500 miles (8,850 km), ranks among the world's most massive construction projects and considered as one of the world's seven wonders. Construction commenced in the 7th century BCE and continued for two millennia. It consists of two parallel walls for significant stretches, along with watchtowers and barracks. Ironically, its efficacy in preventing invasions was limited, leading scholars to suggest it was more of a political symbol than a practical defence."
+   },
+   {
+      "id": 2,
+      "title": "Chichen Itza",
+      "location": "Chichen Itza,Mexico",
+      "image": "https://st.adda247.com/https://cdn.britannica.com/86/179586-138-8B763D72/Overview-Chichen-Itza-Yucatan-Mexico.jpg?w=800&h=450&c=crop",
+      "details": "Chichen Itza, a Mayan city in Mexico, thrived during the 5th to 13th century CE is one of the 7 wonders of the world. Influenced by the Toltecs, the Itza Mayans constructed significant monuments, including the iconic stepped pyramid called EI Castillo, towering 79 feet above the Main Plaza. This pyramids design, with 365 steps representing the solar year, showcases the Mayans astronomical prowess. During equinoxes, the setting sun casts shadows that resemble a serpent descending the north stairway, with a stone snake head at its base."
+   },
+   {
+      "id": 3,
+      "title": "Petra",
+      "location": "Ma'an Governorate,Jordan",
+      "image": "https://st.adda247.com/https://img.atlasobscura.com/AMwx2KbXO0pHJ6qcehkScCcGZoTynLJkFOmJ8918Vs8/rt:fit/h:390/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy8zOTQ3/ZDUxZWE2MzQ0NmJl/NmVfMTIwMHB4LVRo/ZV9Nb25hc3Rlcnks/X1BldHJhLF9Kb3Jk/YW44LmpwZw.jpg",
+      "details": "Petra, also known as Raqmu or the Rose City, is a captivating historical and archaeological marvel in southern Jordan. Founded by the Nabataean tribe, it served as a bustling trade hub, strategically located between Jerusalem, Amman, Damascus and the Red Sea. This “City of Roses” is celebrated as one of the 7 Wonder of the World."
+   },
+   {
+      "id": 4,
+      "title": "Machu Picchu",
+      "location": "Cusco Region,Republic of Peru",
+      "image": "https://st.adda247.com/https://i.natgeofe.com/n/819ea774-aa80-435e-af5a-ae56efee7ce3/92491.jpg?w=1084.125&h=813.75",
+      "details": "In 1911, Hiram Bingham discovered Machu Picchu, an Incan site in Peru, near Cuzco is one of the wonders of the world. Initially mistaken for Vilcabamba, a hidden Incan stronghold from the 16th-century revolt against the Spanish, Machu Picchu is now recognized as one of the few remarkably preserved pre-Columbian ruins and is counted among the 7 Wonder of the World."
+   },
+   {
+      "id": 5,
+      "title": "Christ the Redeemer",
+      "location": "Corcovado Mountain,Brazil",
+      "image": "https://st.adda247.com/https://media.cntraveler.com/photos/58629e8e440f8ba323b9bbea/16:9/w_2560%2Cc_limit/christ-the-redeemer-statue-rio-cr-GettyImages-523194487.jpg",
+      "details": "The Christ the Redeemer Statue or Cristo Redentor, stands atop Mount Corcovado in Rio de Janeiro. Designed by Heitor da Silva Costa in Art Deco style, this 130-foot tall statue is constructed from reinforced concrete and soapstone, weighing 635 tonnes. Financed mostly through contributions, it offers breathtaking views of Rio from the Peak of Corcovado Mountain in Tijuca Forest National Park."
+   },
+   {
+      "id": 6,
+      "title": "The Colosseum",
+      "location": "Rome,Italy",
+      "image": "https://st.adda247.com/https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg",
+      "details": "The Colosseum, formally known as the Flavian Amphithreatre, grace Rome. Titus, Verpasian's son, unveiled it in AD 80, hosting 100 days of thrilling games featuring gladiators and beasts. An iconic Wonder of the World, though two-thirds of the original structure is gone, it remains a top tourist destination."
+   },
+   {
+      "id": 7,
+      "title": "Taj Mahal",
+      "location": "Agra, Uttar Pradesh",
+      "image": "https://images.pexels.com/photos/14966070/pexels-photo-14966070/free-photo-of-in-front-of-iconic-taj-mahal.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "details": "Agra, India houses the Taj Mahal, a stunning marble mausoleum which is among the seven wonders of world, showcasing exquisite Mughal architecture. Constructed by Shah (resigned 1628-58) in memory of his beloved wife Mumtaz Mahal, its hailed as one of the New 7 Wonders of the World. Over 20,000 artisans, guided by skilled architects, dedicated their expertise to this remarkable project."
+   }
+]

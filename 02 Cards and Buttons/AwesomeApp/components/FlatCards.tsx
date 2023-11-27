@@ -1,17 +1,21 @@
-import { StyleSheet, Text, View,ScrollView } from 'react-native'
+import { StyleSheet, Text, View,ScrollView, useColorScheme } from 'react-native'
 import React from 'react'
 
 
 export default function FlatCards() {
+
+  const isDarkMode = useColorScheme() === "dark"
+  console.log(isDarkMode);
+
   return (
     <View>
-     <Text style={styles.heading}>Flat Cards !!</Text>
+     <Text style={isDarkMode ? styles.headingDarkMode : styles.headingWhiteMode}>Flat Cards !!</Text>
       <View style={styles.container} >
-         <View  style={[styles.box,styles.firstCard,styles.boxWithShadow]}><Text style={[styles.text]}>Card</Text></View>
-         <View style={[styles.box,styles.secondCard,styles.boxWithShadow]}><Text style={[styles.text]}>Card</Text></View>
-         <View style={[styles.box,styles.thirdCard,styles.boxWithShadow]}><Text style={[styles.text]}>Card</Text></View>
-         <View style={[styles.box,styles.fourCard,styles.boxWithShadow]}><Text style={[styles.text]}>Card</Text></View>
-         <View style={[styles.box,styles.fifthCard,styles.boxWithShadow]}><Text style={[styles.text]}> Card</Text></View>
+         <View  style={[styles.box,styles.firstCard,styles.boxWithShadow]}><Text style={styles.text}>Card</Text></View>
+         <View style={[styles.box,styles.secondCard,styles.boxWithShadow]}><Text style={styles.text}>Card</Text></View>
+         <View style={[styles.box,styles.thirdCard,styles.boxWithShadow]}><Text style={styles.text}>Card</Text></View>
+         <View style={[styles.box,styles.fourCard,styles.boxWithShadow]}><Text style={styles.text}>Card</Text></View>
+         <View style={[styles.box,styles.fifthCard,styles.boxWithShadow]}><Text style={styles.text}> Card</Text></View>
       </View>
     </View>
   )
@@ -23,9 +27,15 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     padding: 8,
   },
-  heading:{
+  headingWhiteMode:{
     fontSize:24,
-    color:"white",
+    color:"black",
+    fontWeight:"bold",
+    textAlign:"center"
+  },
+  headingDarkMode:{
+    fontSize:24,
+    color:"pink",
     fontWeight:"bold",
     textAlign:"center"
   },

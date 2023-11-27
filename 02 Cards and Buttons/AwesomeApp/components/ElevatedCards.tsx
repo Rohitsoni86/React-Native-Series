@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View,ScrollView } from 'react-native'
+import { StyleSheet, Text, View,ScrollView,useColorScheme } from 'react-native'
 import React from 'react'
 
 const ElevatedCards = () => {
+  const isDarkMode = useColorScheme() === "dark"
+  console.log(isDarkMode);
   return (
    <View>
-   <Text style={styles.heading}>Elevated Cards !!</Text>
+   <Text style={isDarkMode ? styles.headingDarkMode : styles.headingWhiteMode}>Flat Cards !!</Text>
     <ScrollView style={styles.container} horizontal>
        <View  style={[styles.box,styles.firstCard,styles.boxWithShadow]}><Text style={[styles.text]}>First Card</Text></View>
        <View style={[styles.box,styles.secondCard,styles.boxWithShadow]}><Text style={[styles.text]}>Second Card</Text></View>
@@ -23,12 +25,18 @@ const styles = StyleSheet.create({
      display: 'flex',
      padding: 8,
    },
-   heading:{
-      fontSize:24,
-      color:"white",
-      fontWeight:"bold",
-      textAlign:"center"
-    },
+   headingWhiteMode:{
+    fontSize:24,
+    color:"black",
+    fontWeight:"bold",
+    textAlign:"center"
+  },
+  headingDarkMode:{
+    fontSize:24,
+    color:"pink",
+    fontWeight:"bold",
+    textAlign:"center"
+  },
     text:{
       fontSize:12,
       color:"white",
